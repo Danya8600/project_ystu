@@ -3,7 +3,7 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-
+# проверка на работоспособность push
 class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
