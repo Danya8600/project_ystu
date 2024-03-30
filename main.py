@@ -11,7 +11,7 @@ class MyWidget(QMainWindow):
         self.enter_btn.clicked.connect(self.enter)
 
     def enter(self):
-        self.enter_btn.setText("ok")
+        self.enter_btn.setText("test")
 
 
 if __name__ == '__main__':
