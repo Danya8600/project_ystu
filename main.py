@@ -41,7 +41,6 @@ class MyWidget(QMainWindow):
                 self.enter_btn.setText("данные неверны!")
         else:
             self.enter_btn.setText("данные неверны!")
-        print(sl)
         con.close()
 
 
