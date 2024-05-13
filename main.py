@@ -1,10 +1,10 @@
 import sys
 import sqlite3
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
 
-class MyWidget(QMainWindow):
+class WindowReg(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('reg.ui', self)
@@ -36,7 +36,9 @@ class MyWidget(QMainWindow):
 
         if self.login.text() in sl.keys():
             if self.password.text() == sl[self.login.text()]:
-                self.enter_btn.setText("данные верны!")
+                self.new_window = WindowAdmin()
+                self.new_window.show()
+                self.hide()
             else:
                 self.enter_btn.setText("данные неверны!")
         else:
@@ -44,8 +46,14 @@ class MyWidget(QMainWindow):
         con.close()
 
 
+class WindowAdmin(QWidget):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('window_admin.ui', self)
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = MyWidget()
+    ex = WindowReg()
     ex.show()
     sys.exit(app.exec_())
