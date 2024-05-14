@@ -1,6 +1,8 @@
 import sys
 import sqlite3
 from admin import *
+from manager import *
+from rabotyga import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
@@ -49,7 +51,14 @@ class WindowReg(QMainWindow):
                     self.new_window.show()
                     self.hide()
                 else:
-                    self.enter_btn.setText("недостаточно прав")
+                    if sl[self.login.text()][1] == 2:
+                        self.new_window = WindowManager()
+                        self.new_window.show()
+                        self.hide()
+                    else:
+                        self.new_window = WindowRabotyga()
+                        self.new_window.show()
+                        self.hide()
             else:
                 self.enter_btn.setText("данные неверны!")
         else:
