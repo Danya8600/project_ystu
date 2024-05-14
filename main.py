@@ -29,17 +29,27 @@ class WindowReg(QMainWindow):
             for elp1 in elp:
                 res_pswd.append(elp1)
 
-        sl = {}  # словарь логинов и паролей
+        res_level_test = cur.execute("""SELECT id_level FROM log_pswd""").fetchall()
+        res_level = []  # список "уровней" должностей, которые есть в бд
+
+        for l in res_level_test:
+            for l1 in l:
+                res_level.append(l1)
+
+        sl = {}  # словарь логинов и соответствующих данных(пароль + уровень)
         k = 0  # счетчик для перебора индексов
         for i in range(len(res_log)):
-            sl[res_log[k]] = res_pswd[k]
+            sl[res_log[k]] = [res_pswd[k], res_level[k]]
             k += 1
 
         if self.login.text() in sl.keys():
-            if self.password.text() == sl[self.login.text()]:
-                self.new_window = WindowAdmin()
-                self.new_window.show()
-                self.hide()
+            if self.password.text() == sl[self.login.text()][0]:
+                if sl[self.login.text()][1] == 1:
+                    self.new_window = WindowAdmin()
+                    self.new_window.show()
+                    self.hide()
+                else:
+                    self.enter_btn.setText("недостаточно прав")
             else:
                 self.enter_btn.setText("данные неверны!")
         else:
