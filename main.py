@@ -1,5 +1,6 @@
 import sys
 import sqlite3
+from admin import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
@@ -44,12 +45,6 @@ class WindowReg(QMainWindow):
         else:
             self.enter_btn.setText("данные неверны!")
         con.close()
-
-
-class WindowAdmin(QWidget):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi('window_admin.ui', self)
 
 
 if __name__ == '__main__':
