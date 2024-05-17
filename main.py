@@ -50,16 +50,16 @@ class WindowReg(QMainWindow):
                 if sl[self.login.text()][1] == 1:
                     self.new_window = WindowAdmin()
                     self.new_window.show()
-                    self.hide()
+                    self.close()
                 else:
                     if sl[self.login.text()][1] == 2:
                         self.new_window = WindowManager()
                         self.new_window.show()
-                        self.hide()
+                        self.close()
                     else:
                         self.new_window = WindowRabotyga()
                         self.new_window.show()
-                        self.hide()
+                        self.close()
             else:
                 self.enter_btn.setText("данные неверны!")
         else:
