@@ -58,7 +58,7 @@ background-color: rgb(170, 255, 0);</string>
      <number>0</number>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="money_text">
     <property name="geometry">
      <rect>
       <x>1</x>
@@ -68,7 +68,7 @@ background-color: rgb(170, 255, 0);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="details">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -129,7 +129,7 @@ background-color: rgb(255, 255, 255);</string>
     <string notr="true">background-color: rgb(170, 255, 0);
 border-radius: 20px;</string>
    </property>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="request">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -173,7 +173,7 @@ background-color: rgb(170, 255, 0);</string>
    </property>
    <layout class="QFormLayout" name="formLayout_2"/>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="exitbtn">
    <property name="geometry">
     <rect>
      <x>1870</x>
@@ -192,7 +192,7 @@ background-color: rgb(170, 255, 0);</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>textEdit</tabstop>
+  <tabstop>money_text</tabstop>
  </tabstops>
  <resources/>
  <connections/>
