@@ -15,7 +15,7 @@ class WindowReg(QMainWindow):
         self.enter_btn.clicked.connect(self.enter)
 
     def enter(self):
-        con = sqlite3.connect("test_reg.db")  # подключил бд с аккаунтами
+        con = sqlite3.connect("All_data.db")  # подключил бд с аккаунтами
         cur = con.cursor()
         res_log_test = cur.execute("""SELECT login FROM log_pswd""").fetchall()
 
