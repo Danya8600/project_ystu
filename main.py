@@ -11,6 +11,7 @@ class WindowReg(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('reg.ui', self)
+        self.setWindowTitle("Добро пожаловать!")
         self.enter_btn.clicked.connect(self.enter)
 
     def enter(self):

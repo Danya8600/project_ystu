@@ -8,3 +8,4 @@ class WindowManager(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('window_manager.ui', self)
+        self.setWindowTitle("Менеджер")

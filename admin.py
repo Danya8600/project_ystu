@@ -8,3 +8,4 @@ class WindowAdmin(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('window_admin.ui', self)
+        self.setWindowTitle("Администратор")

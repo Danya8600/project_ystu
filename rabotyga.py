@@ -8,3 +8,4 @@ class WindowRabotyga(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('window_rabotyga.ui', self)
+        self.setWindowTitle("Рабочий")
