@@ -173,6 +173,23 @@ background-color: rgb(170, 255, 0);</string>
    </property>
    <layout class="QFormLayout" name="formLayout_2"/>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1870</x>
+     <y>0</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../../Downloads/icons8-выход-50.png</normaloff>../../../Downloads/icons8-выход-50.png</iconset>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>textEdit</tabstop>
