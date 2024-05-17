@@ -187,7 +187,7 @@ background-color: rgb(170, 255, 0);</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../Downloads/icons8-выход-50.png</normaloff>../../../Downloads/icons8-выход-50.png</iconset>
+     <normaloff>icon_exit.png</normaloff>icon_exit.png</iconset>
    </property>
   </widget>
  </widget>
