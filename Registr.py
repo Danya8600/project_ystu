@@ -3,19 +3,15 @@ import sqlite3
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 
+
 class WindowRegistr(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('window_registr.ui', self)
         self.setWindowTitle("Добавление аккаунта")
-
-class Registretion(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.sozd.clicked.connect(self.regist)
+        self.sozdbtn.clicked.connect(self.regist)
 
     def regist(self):
-        print("hello")
         fam = self.lineEdit.text()
         im = self.lineEdit_2.text()
         otch = self.lineEdit_3.text()
@@ -34,7 +30,6 @@ class Registretion(QWidget):
             return
         if len(tel) == 0:
             return
-        table_name = 'log_pswd'
         query = f"SELECT COUNT(*) FROM {log_pswd}"
         cursor.execute(query)
         result = cursor.fetchone()
@@ -49,8 +44,6 @@ class Registretion(QWidget):
                 id_level = 3
         cursor.execute(f'SELECT login FROM log_pswd WHERE login="{login}"')
         if cursor.fetchone() is None:
-            cursor.execute(f'INSERT INTO log_pswd VALUES ("{id_user}", "{login}", "{password}", "{id_level}")')
-            cursor.execute(f'INSERT INTO Личные данные VALUES ("{fam}", "{im}", "{otch}", "{tel}")')
+            cursor.execute(f'INSERT INTO log_pswd VALUES ("{row_count}", "{login}", "{password}", "{id_level}")')
+            cursor.execute(f'INSERT INTO lich_dan VALUES ("{fam}", "{im}", "{otch}", "{tel}")')
         print(id_user)
-
-
