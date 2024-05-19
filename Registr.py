@@ -11,9 +11,11 @@ class WindowRegistr(QWidget):
 
 class Registretion(QWidget):
     def __init__(self):
-        self.pushBatton.clicked.connect(self.regist)
+        super().__init__()
+        self.sozd.clicked.connect(self.regist)
 
     def regist(self):
+        print("hello")
         fam=self.lineEdit.text()
         im=self.lineEdit_2.text()
         otch=self.lineEdit_3.text()
