@@ -147,7 +147,7 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>671</x>
-     <y>307</y>
+     <y>300</y>
      <width>600</width>
      <height>700</height>
     </rect>
@@ -156,7 +156,27 @@ border-radius: 20px;</string>
     <string notr="true">border-radius: 20px;
 background-color: rgb(170, 255, 0);</string>
    </property>
-   <layout class="QFormLayout" name="formLayout"/>
+   <widget class="QPushButton" name="registrbtn">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>650</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 20px;
+background-color: rgb(170, 170, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>plus.png</normaloff>plus.png</iconset>
+    </property>
+   </widget>
   </widget>
   <widget class="QFrame" name="formFrame">
    <property name="geometry">
