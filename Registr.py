@@ -22,15 +22,20 @@ class WindowRegistr(QWidget):
         pas2 = self.lineEdit_6.text()
         tel = self.lineEdit_7.text()
         dol = self.comboBox.currentText()
+        self.error.setText(" ")
         if len(fam) == 0:
+            self.error.setText("Заполните поле Фамилия")
             return
         if len(im) == 0:
+            self.error.setText("Заполните поле Имя")
             return
         if len(login) == 0:
             return
         if len(password) == 0 and pas2 != password:
+            self.error.setText("Ошибка в пароле")
             return
         if (len(tel) == 12 and tel[0] != "+") or (len(tel) == 11 and tel[0] != "8"):
+            self.error.setText("Некорректный номер!")
             return
         table_name = 'log_pswd'
         query = f"SELECT COUNT(*) FROM {table_name}"
