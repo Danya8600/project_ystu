@@ -4,7 +4,7 @@ from admin import *
 from manager import *
 from rabotyga import *
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QLineEdit
 
 
 class WindowReg(QMainWindow):
@@ -13,6 +13,7 @@ class WindowReg(QMainWindow):
         uic.loadUi('reg.ui', self)
         self.setWindowTitle("Добро пожаловать!")
         self.enter_btn.clicked.connect(self.enter)
+        self.password.setEchoMode(QLineEdit.Password)
 
     def enter(self):
         con = sqlite3.connect("All_data.db")  # подключил бд с аккаунтами

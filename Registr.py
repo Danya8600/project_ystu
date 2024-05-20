@@ -1,7 +1,7 @@
 import sys
 import sqlite3
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QLineEdit
 
 
 class WindowRegistr(QWidget):
@@ -9,6 +9,8 @@ class WindowRegistr(QWidget):
         super().__init__()
         uic.loadUi('window_registr.ui', self)
         self.setWindowTitle("Добавление аккаунта")
+        self.lineEdit_5.setEchoMode(QLineEdit.Password)
+        self.lineEdit_6.setEchoMode(QLineEdit.Password)
         self.sozdbtn.clicked.connect(self.regist)
 
     def regist(self):
