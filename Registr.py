@@ -30,7 +30,7 @@ class WindowRegistr(QWidget):
             return
         if len(password) == 0 and pas2 != password:
             return
-        if len(tel) != 12 or len(tel) !=11:
+        if (len(tel) != 12 and tel == +[0]) or (len(tel) != 11 and tel == 8[0]):
             return
         table_name='log_pswd'
         query = f"SELECT COUNT(*) FROM {table_name}"
