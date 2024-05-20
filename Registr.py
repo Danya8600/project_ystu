@@ -49,4 +49,5 @@ class WindowRegistr(QWidget):
         if cur.fetchone() is None:
             cur.execute(f'INSERT INTO log_pswd VALUES ("{id_user}", "{login}", "{password}", "{id_level}")')
             cur.execute(f'INSERT INTO lich_dan VALUES ("{id_user}", "{fam}", "{im}", "{otch}", "{tel}")')
+            self.sozdbtn.setText("Готово!")
             con.commit()
