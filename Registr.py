@@ -30,16 +30,16 @@ class WindowRegistr(QWidget):
             return
         if len(password) == 0 and pas2 != password:
             return
-        if (len(tel) != 12 and tel == +[0]) or (len(tel) != 11 and tel == 8[0]):
+        if (len(tel) == 12 and tel[0] != "+") or (len(tel) == 11 and tel[0] != "8"):
             return
-        table_name='log_pswd'
+        table_name = 'log_pswd'
         query = f"SELECT COUNT(*) FROM {table_name}"
         con = sqlite3.connect("All_data.db")  # подключил бд с аккаунтами
         cur = con.cursor()
         cur.execute(query)
         result = cur.fetchone()
         row_count = result[0]
-        id_user = row_count+1
+        id_user = row_count + 1
         if dol == "Администратор":
             id_level = 1
         else:
