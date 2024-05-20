@@ -2,6 +2,7 @@ import sys
 import sqlite3
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtGui import *
 
 
 class WindowManager(QWidget):
@@ -9,3 +10,4 @@ class WindowManager(QWidget):
         super().__init__()
         uic.loadUi('window_manager.ui', self)
         self.setWindowTitle("Менеджер")
+        self.setWindowIcon(QIcon('лого.png'))

@@ -2,6 +2,7 @@ import sys
 import sqlite3
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QLineEdit
+from PyQt5.QtGui import *
 
 
 class WindowRegistr(QWidget):
@@ -9,6 +10,7 @@ class WindowRegistr(QWidget):
         super().__init__()
         uic.loadUi('window_registr.ui', self)
         self.setWindowTitle("Добавление аккаунта")
+        self.setWindowIcon(QIcon('лого.png'))
         self.lineEdit_5.setEchoMode(QLineEdit.Password)
         self.lineEdit_6.setEchoMode(QLineEdit.Password)
         self.sozdbtn.clicked.connect(self.regist)
@@ -31,7 +33,7 @@ class WindowRegistr(QWidget):
             return
         if len(login) == 0:
             return
-        if len(password) == 0 and pas2 != password:
+        if len(password) == 0 or pas2 != password:
             self.error.setText("Ошибка в пароле")
             return
         if (len(tel) == 12 and tel[0] != "+") or (len(tel) == 11 and tel[0] != "8"):

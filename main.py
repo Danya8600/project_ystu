@@ -5,6 +5,7 @@ from manager import *
 from rabotyga import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QLineEdit
+from PyQt5.QtGui import *
 
 
 class WindowReg(QMainWindow):
@@ -13,6 +14,7 @@ class WindowReg(QMainWindow):
         uic.loadUi('reg.ui', self)
         self.setWindowTitle("Добро пожаловать!")
         self.enter_btn.clicked.connect(self.enter)
+        self.setWindowIcon(QIcon('лого.png'))
         self.password.setEchoMode(QLineEdit.Password)
 
     def enter(self):

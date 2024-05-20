@@ -3,6 +3,7 @@ import sqlite3
 from Registr import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtGui import *
 
 
 class WindowAdmin(QWidget):
@@ -10,6 +11,7 @@ class WindowAdmin(QWidget):
         super().__init__()
         uic.loadUi('window_admin.ui', self)
         self.setWindowTitle("Администратор")
+        self.setWindowIcon(QIcon('лого.png'))
         self.exitbtn.clicked.connect(self.exit)
         self.registrbtn.clicked.connect(self.regi)
 
