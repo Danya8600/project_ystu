@@ -47,9 +47,6 @@ class WindowRegistr(QWidget):
                 id_level = 3
         cur.execute(f'SELECT login FROM log_pswd WHERE login="{login}"')
         if cur.fetchone() is None:
-            print('6')
             cur.execute(f'INSERT INTO log_pswd VALUES ("{id_user}", "{login}", "{password}", "{id_level}")')
-            print('7')
             cur.execute(f'INSERT INTO lich_dan VALUES ("{id_user}", "{fam}", "{im}", "{otch}", "{tel}")')
-
-        print(id_user)
+            con.commit()
