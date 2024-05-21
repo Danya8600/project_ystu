@@ -28,6 +28,13 @@ class WindowReg(QMainWindow):
             for el1 in el:
                 res_log.append(el1)
 
+        res_id_test = cur.execute("""SELECT id_user FROM log_pswd""").fetchall()
+        res_id = []  # список "уровней" должностей, которые есть в бд
+
+        for azs in res_id_test:
+            for azs1 in azs:
+                res_id.append(azs1)
+
         res_pswd_test = cur.execute("""SELECT password FROM log_pswd""").fetchall()
         res_pswd = []  # список паролей, которые есть в бд
 
@@ -45,21 +52,24 @@ class WindowReg(QMainWindow):
         sl = {}  # словарь логинов и соответствующих данных(пароль + уровень)
         k = 0  # счетчик для перебора индексов
         for i in range(len(res_log)):
-            sl[res_log[k]] = [res_pswd[k], res_level[k]]
+            sl[res_log[k]] = [res_id[k], res_pswd[k], res_level[k]]
             k += 1
 
         if self.login.text() in sl.keys():
-            if self.password.text() == sl[self.login.text()][0]:
-                if sl[self.login.text()][1] == 1:
+            if self.password.text() == sl[self.login.text()][1]:
+                if sl[self.login.text()][2] == 1:
+                    id = sl[self.login.text()][0]
                     self.new_window = WindowAdmin()
                     self.new_window.show()
                     self.close()
                 else:
-                    if sl[self.login.text()][1] == 2:
+                    if sl[self.login.text()][2] == 2:
+                        id = sl[self.login.text()][0]
                         self.new_window = WindowManager()
                         self.new_window.show()
                         self.close()
                     else:
+                        id = sl[self.login.text()][0]
                         self.new_window = WindowRabotyga()
                         self.new_window.show()
                         self.close()

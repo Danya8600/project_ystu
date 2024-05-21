@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="sozdanie">
+  <widget class="QPushButton" name="sozdaniebtn">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -52,6 +52,12 @@
      <width>350</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QComboBox" name="Ispoln">
@@ -128,6 +134,15 @@
      <width>540</width>
      <height>250</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
    </property>
   </widget>
   <widget class="QLabel" name="texzap">
