@@ -64,9 +64,9 @@ class WindowReg(QMainWindow):
                         self.new_window.show()
                         self.close()
             else:
-                self.enter_btn.setText("данные неверны!")
+                self.label.setText("Данные неверны!")
         else:
-            self.enter_btn.setText("данные неверны!")
+            self.label.setText("Данные неверны!")
         con.close()
 
 

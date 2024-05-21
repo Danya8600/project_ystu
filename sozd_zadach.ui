@@ -83,11 +83,6 @@
      <string>Рабочий</string>
     </property>
    </item>
-   <item>
-    <property name="text">
-     <string>Все должности</string>
-    </property>
-   </item>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">

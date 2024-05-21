@@ -6,70 +6,123 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>240</height>
+    <width>400</width>
+    <height>250</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>20</y>
-     <width>439</width>
-     <height>209</height>
+     <x>150</x>
+     <y>200</y>
+     <width>220</width>
+     <height>30</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="login_label">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="text">
-       <string>Введите логин:</string>
-      </property>
-      <property name="textFormat">
-       <enum>Qt::AutoText</enum>
-      </property>
-      <property name="scaledContents">
-       <bool>false</bool>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="login"/>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="passwd_login">
-        <property name="text">
-         <string>Введите пароль:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="password"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="enter_btn">
-        <property name="text">
-         <string>enter</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="login">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>340</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="login_label">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>150</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Введите логин:</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="passwd_login">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>170</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Введите пароль:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="enter_btn">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Войти</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>340</width>
+     <height>30</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

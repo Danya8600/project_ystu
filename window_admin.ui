@@ -40,27 +40,6 @@
      <normaloff>icon_exit.png</normaloff>icon_exit.png</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="registrbtn">
-   <property name="geometry">
-    <rect>
-     <x>1810</x>
-     <y>0</y>
-     <width>50</width>
-     <height>50</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 25px;
-background-color: rgb(170, 170, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>plus.png</normaloff>plus.png</iconset>
-   </property>
-  </widget>
   <widget class="QTabWidget" name="List">
    <property name="geometry">
     <rect>
@@ -243,16 +222,49 @@ background-color: rgb(170, 255, 0);</string>
     <attribute name="title">
      <string>Сотрудники</string>
     </attribute>
+    <widget class="QPushButton" name="registrbtn">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>240</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 25px;
+background-color: rgb(170, 170, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>plus.png</normaloff>plus.png</iconset>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>Задачи</string>
     </attribute>
+    <widget class="QPushButton" name="Oknozadbtn">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>170</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PushButton</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <zorder>List</zorder>
   <zorder>exitbtn</zorder>
-  <zorder>registrbtn</zorder>
  </widget>
  <tabstops>
   <tabstop>money_text</tabstop>
