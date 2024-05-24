@@ -263,8 +263,30 @@ background-color: rgb(170, 170, 0);</string>
     </widget>
    </widget>
   </widget>
+  <widget class="QLabel" name="name_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>15</y>
+     <width>541</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>18</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>List</zorder>
   <zorder>exitbtn</zorder>
+  <zorder>name_label</zorder>
  </widget>
  <tabstops>
   <tabstop>money_text</tabstop>

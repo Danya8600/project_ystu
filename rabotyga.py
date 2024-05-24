@@ -6,8 +6,10 @@ from PyQt5.QtGui import *
 
 
 class WindowRabotyga(QWidget):
-    def __init__(self):
+    def __init__(self, email):
         super().__init__()
         uic.loadUi('window_rabotyga.ui', self)
+        self.email = email
         self.setWindowTitle("Рабочий")
         self.setWindowIcon(QIcon('лого.png'))
+        self.name_label.setText(f'Привет, {self.email}')

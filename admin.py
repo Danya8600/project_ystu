@@ -8,15 +8,16 @@ from PyQt5.QtGui import *
 
 
 class WindowAdmin(QWidget):
-    def __init__(self):
+    def __init__(self, email):
         super().__init__()
         uic.loadUi('window_admin.ui', self)
+        self.email = email
         self.setWindowTitle("Администратор")
         self.setWindowIcon(QIcon('лого.png'))
         self.exitbtn.clicked.connect(self.exit)
         self.registrbtn.clicked.connect(self.regi)
         self.Oknozadbtn.clicked.connect(self.sozdzad)
-
+        self.name_label.setText(f'Привет, {self.email}')
 
     def exit(self):
         self.close()

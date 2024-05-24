@@ -16,6 +16,7 @@ class WindowReg(QMainWindow):
         self.enter_btn.clicked.connect(self.enter)
         self.setWindowIcon(QIcon('лого.png'))
         self.password.setEchoMode(QLineEdit.Password)
+        self.email = ""
 
     def enter(self):
         con = sqlite3.connect("All_data.db")  # подключил бд с аккаунтами
@@ -58,19 +59,19 @@ class WindowReg(QMainWindow):
         if self.login.text() in sl.keys():
             if self.password.text() == sl[self.login.text()][1]:
                 if sl[self.login.text()][2] == 1:
-                    id = sl[self.login.text()][0]
-                    self.new_window = WindowAdmin()
+                    self.email = self.login.text()
+                    self.new_window = WindowAdmin(self.email)
                     self.new_window.show()
                     self.close()
                 else:
                     if sl[self.login.text()][2] == 2:
-                        id = sl[self.login.text()][0]
-                        self.new_window = WindowManager()
+                        self.email = self.login.text()
+                        self.new_window = WindowManager(self.email)
                         self.new_window.show()
                         self.close()
                     else:
-                        id = sl[self.login.text()][0]
-                        self.new_window = WindowRabotyga()
+                        self.email = self.login.text()
+                        self.new_window = WindowRabotyga(self.email)
                         self.new_window.show()
                         self.close()
             else:
