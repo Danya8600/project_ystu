@@ -62,7 +62,7 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -372,8 +372,22 @@ background-color: rgb(170, 170, 0);</string>
       </property>
      </column>
     </widget>
+    <widget class="QPushButton" name="enter">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>790</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>поиск</string>
+     </property>
+    </widget>
     <zorder>Sotr</zorder>
     <zorder>registrbtn</zorder>
+    <zorder>enter</zorder>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">

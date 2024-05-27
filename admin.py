@@ -3,7 +3,7 @@ import sqlite3
 from Registr import *
 from Sozd_zadach import *
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QTableWidget, QTableWidgetItem
 from PyQt5.QtGui import *
 
 
@@ -33,6 +33,39 @@ class WindowAdmin(QWidget):
         self.registrbtn.clicked.connect(self.regi)
         self.Oknozadbtn.clicked.connect(self.sozdzad)
         self.name_label.setText(f'Привет, {self.surname} {self.name}')
+
+        self.enter.clicked.connect(self.load_data_from_db)
+
+    def load_data_from_db(self):
+        # Подключение к базе данных
+        connection = sqlite3.connect("All_data.db")
+        cursor = connection.cursor()
+
+        # Выполнение объединенного запроса к базе данных
+        query = """
+                SELECT lich_dan.Фамилия, lich_dan.Имя, lich_dan.Отчество, Должности.наименование_долж, lich_dan.телефон, log_pswd.login
+                FROM lich_dan
+                JOIN log_pswd ON lich_dan.id_user = log_pswd.id_user
+                JOIN Должности ON log_pswd.id_level = Должности.id_level
+                """
+        cursor.execute(query)
+        rows = cursor.fetchall()
+
+        # Установка количества строк в таблице
+        self.Sotr.setRowCount(len(rows))
+
+        # Заполнение таблицы данными
+        row_index = 0
+        for row_data in rows:
+            column_index = 0
+            for cell_data in row_data:
+                self.Sotr.setItem(row_index, column_index, QTableWidgetItem(str(cell_data)))
+                column_index += 1
+            row_index += 1
+
+        # Закрытие соединения с базой данных
+        connection.close()
+
 
     def exit(self):
         self.close()
