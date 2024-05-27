@@ -27,14 +27,8 @@ class Sozd_zad(QWidget):
         if len(opis) == 0:
             self.texzap.setText("Заполните описание")
             return
-        table_name = 'Задачи'
-        query = f"SELECT COUNT(*) FROM {table_name}"
         con = sqlite3.connect("All_data.db")  # подключил бд с аккаунтами
         cur = con.cursor()
-        cur.execute(query)
-        result = cur.fetchone()
-        row_count = result[0]
-        id_zad = row_count + 1
         if isp == "Администратор":
             id_level = 1
         else:
