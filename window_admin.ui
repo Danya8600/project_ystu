@@ -62,7 +62,7 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -101,16 +101,6 @@ background-color: rgb(170, 255, 0);</string>
       </property>
       <property name="margin">
        <number>0</number>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="money_text">
-      <property name="geometry">
-       <rect>
-        <x>1</x>
-        <y>120</y>
-        <width>581</width>
-        <height>192</height>
-       </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="details">
@@ -158,6 +148,30 @@ background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="autoDefault">
        <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_zp">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>551</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>72</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -296,9 +310,6 @@ background-color: rgb(170, 170, 0);</string>
   <zorder>exitbtn</zorder>
   <zorder>name_label</zorder>
  </widget>
- <tabstops>
-  <tabstop>money_text</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
