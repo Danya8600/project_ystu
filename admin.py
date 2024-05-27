@@ -16,10 +16,10 @@ class WindowAdmin(QWidget):
         con = sqlite3.connect("All_data.db")  # подключил бд с аккаунтами
         cur = con.cursor()
         cur.execute(f'SELECT id_user FROM log_pswd WHERE login="{self.email}"')
-        id_result = cur.fetchone()[0]
-        cur.execute(f'SELECT Фамилия FROM lich_dan WHERE id_user="{id_result}"')
+        self.id_result = cur.fetchone()[0]
+        cur.execute(f'SELECT Фамилия FROM lich_dan WHERE id_user="{self.id_result}"')
         self.surname = cur.fetchone()[0]
-        cur.execute(f'SELECT Имя FROM lich_dan WHERE id_user="{id_result}"')
+        cur.execute(f'SELECT Имя FROM lich_dan WHERE id_user="{self.id_result}"')
         self.name = cur.fetchone()[0]
 
         self.setWindowTitle("Администратор")
@@ -37,5 +37,5 @@ class WindowAdmin(QWidget):
         self.new_window.show()
 
     def sozdzad(self):
-        self.new_window = Sozd_zad()
+        self.new_window = Sozd_zad(self.id_result)
         self.new_window.show()

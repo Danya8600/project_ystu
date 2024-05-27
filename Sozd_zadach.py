@@ -1,14 +1,17 @@
 import sys
 import sqlite3
 from main import *
+from admin import *
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtGui import *
 
+
 class Sozd_zad(QWidget):
-    def __init__(self):
+    def __init__(self, id_result):
         super().__init__()
         uic.loadUi('sozd_zadach.ui', self)
+        self.id_result = id_result
         self.setWindowTitle("Новая задача")
         self.setWindowIcon(QIcon('лого.png'))
         self.sozdaniebtn.clicked.connect(self.sozdanie)
@@ -39,6 +42,7 @@ class Sozd_zad(QWidget):
                 id_level = 2
             else:
                 id_level = 3
-        cur.execute(f'INSERT INTO Задачи VALUES ("{id}", "{id_zad}", "{naz}", "{id_level}", "{opis}")')
+        self.srok = 1
+        cur.execute(f'INSERT INTO Задачи VALUES ("{self.id_result}", "{id_level}", "{opis}", "{self.srok}")')
         self.sozdaniebtn.setText("Готово!")
         con.commit()
