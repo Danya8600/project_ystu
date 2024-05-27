@@ -257,6 +257,18 @@ background-color: rgb(170, 170, 0);</string>
        <normaloff>plus.png</normaloff>plus.png</iconset>
      </property>
     </widget>
+    <widget class="QTableWidget" name="Sotr">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1880</width>
+       <height>841</height>
+      </rect>
+     </property>
+    </widget>
+    <zorder>Sotr</zorder>
+    <zorder>registrbtn</zorder>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
@@ -283,6 +295,18 @@ background-color: rgb(170, 170, 0);</string>
        <normaloff>plus.png</normaloff>plus.png</iconset>
      </property>
     </widget>
+    <widget class="QTableWidget" name="Zad">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1880</width>
+       <height>841</height>
+      </rect>
+     </property>
+    </widget>
+    <zorder>Zad</zorder>
+    <zorder>Oknozadbtn</zorder>
    </widget>
   </widget>
   <widget class="QLabel" name="name_label">
