@@ -423,9 +423,65 @@ background-color: rgb(170, 170, 0);</string>
        <height>841</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>626</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Создатель</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Исполнитель</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Описание задачи</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="enter_2">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>770</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>поиск</string>
+     </property>
     </widget>
     <zorder>Zad</zorder>
     <zorder>Oknozadbtn</zorder>
+    <zorder>enter_2</zorder>
    </widget>
   </widget>
   <widget class="QLabel" name="name_label">
