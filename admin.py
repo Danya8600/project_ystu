@@ -36,6 +36,9 @@ class WindowAdmin(QWidget):
 
         self.enter.clicked.connect(self.load_data_from_db)
 
+        self.enter_2.clicked.connect(self.load_data_from_db_2)
+
+
     def load_data_from_db(self):
         # Подключение к базе данных
         connection = sqlite3.connect("All_data.db")
@@ -66,6 +69,45 @@ class WindowAdmin(QWidget):
         # Закрытие соединения с базой данных
         connection.close()
 
+    def load_data_from_db_2(self):
+        # Подключение к базе данных
+        # connection = sqlite3.connect("All_data.db")
+        # cursor = connection.cursor()
+        # cursor.execute("SELECT lich_dan.Фамилия, lich_dan.Имя, lich_dan.Отчество FROM lich_dan")
+        # self.fio = cursor.fetchall()
+        # self.fio_list = [] # двумерный массив из списков с фио пользователей
+        # for i in self.fio:
+        #     self.fio_list.append(list(i))
+        #
+        # # Выполнение объединенного запроса к базе данных
+        # query = """
+        #            SELECT Должности.наименование_долж, Задачи.Описание
+        #            FROM Должности
+        #            JOIN Задачи ON Задачи.id_user
+        #         """
+
+        # SELECT lich_dan{Фамилия, Имя, Отчество}, Должности.наименование_долж, Задачи.Описание
+        # FROM lich_dan
+        # JOIN log_pswd ON lich_dan.id_user = Задачи.id_user
+        # JOIN Должности ON Задачи.Должность = Должности.id_level
+        # cursor.execute(query)
+        # rows = cursor.fetchall()
+        # print(rows)
+
+        # Установка количества строк в таблице
+        # self.Zad.setRowCount(len(rows))
+        #
+        # # Заполнение таблицы данными
+        # row_index = 0
+        # for row_data in rows:
+        #     column_index = 0
+        #     for cell_data in row_data:
+        #         self.Zad.setItem(row_index, column_index, QTableWidgetItem(str(cell_data)))
+        #         column_index += 1
+        #     row_index += 1
+        #
+        # # Закрытие соединения с базой данных
+        # connection.close()
 
     def exit(self):
         self.close()
